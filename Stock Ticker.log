@@ -1,0 +1,9 @@
+ERROR:Stock Ticker:Exception: [Errno 2] No such file or directory: u'tickers.dat'
+Traceback (most recent call last):
+  File "StockTicker.py", line 52, in main
+    tickersList = tickerHandler.GetTickerSymbolsFromFile()
+  File "/home/pi/python/Stock Ticker/StockTickerHandler.py", line 9, in GetTickerSymbolsFromFile
+    return self.__stockTickerEngine.GetTickerSymbolsFromFile()
+  File "/home/pi/python/Stock Ticker/StockTickerEngine/StockTickerEngine.py", line 24, in GetTickerSymbolsFromFile
+    tickerList = [line.strip() for line in open(self.__fileName, 'r')]
+IOError: [Errno 2] No such file or directory: u'tickers.dat'
